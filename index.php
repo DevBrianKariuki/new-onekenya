@@ -193,10 +193,10 @@ if (isset($_SESSION['email'])) {
                                                 <!-- start product image -->
                                                 <a href="short-description.php">
                                                     <!-- image -->
-                                                    <img class="primary blur-up lazyload" data-src="vendor/products/<?=$rows['image']?>" src="vendor/products/<?=$rows['image']?>" alt="image" title="product">
+                                                    <img class="primary blur-up lazyload" data-src="/vendor/products/<?=$rows['image']?>" src="/vendor/products/<?=$rows['image']?>" alt="image" title="product">
                                                     <!-- End image -->
                                                     <!-- Hover image -->
-                                                    <img class="hover blur-up lazyload" data-src="vendor/products/<?=$rows['image']?>" src="vendor/products/<?=$rows['image']?>" alt="image" title="product">
+                                                    <img class="hover blur-up lazyload" data-src="/vendor/products/<?=$rows['image']?>" src="/vendor/products/<?=$rows['image']?>" alt="image" title="product">
                                                     <!-- End hover image -->
                                                 </a>
                                                 <!-- end product image -->
