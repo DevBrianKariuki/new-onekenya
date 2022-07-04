@@ -13,11 +13,11 @@ if (isset($_POST['register'])) {
 	$password_2 = mysqli_escape_string($db, $_POST['password2']);
 
 	if (strlen($phone) < 10 or strlen($phone) > 10 and !is_numeric($phone)) {
-		header("Location: /OneKenya/register.php?error=Please enter a valid phone number");
+		header("Location: ../register.php?error=Please enter a valid phone number");
 	} else if (strlen($password_1) < 6) {
-		header("Location: /OneKenya/register.php?error=Password should be more than 6 characters");
+		header("Location: ../register.php?error=Password should be more than 6 characters");
 	}else if ($password_1 != $password_2) {
-		header("Location: /OneKenya/register.php?error=Passwords do not match");
+		header("Location: ../register.php?error=Passwords do not match");
 	}else {
 		//Check if the user is already registered
 		$query = "SELECT * FROM `customers` where `email` = '$email'";
@@ -27,7 +27,7 @@ if (isset($_POST['register'])) {
 			$user = mysqli_fetch_assoc($result);
 
 			if ($user['email'] === $email) {
-				header("Location: /OneKenya/register.php?error=Email is already registered");
+				header("Location: ../register.php?error=Email is already registered");
 				exit();
 			}
 		}else{
@@ -42,14 +42,14 @@ if (isset($_POST['register'])) {
 				$_SESSION['last_name'] = $user['last_name'];
 				$_SESSION['phone'] = $user['phone'];
 			}else{
-				header("Location: /OneKenya/register.php?error=An unknown error occured");
+				header("Location: ../register.php?error=An unknown error occured");
 			}
 		}
 	}
 
 
 }else{
-	header("Location: /OneKenya/register.php");
+	header("Location: ../register.php");
 	exit();
 }
 
