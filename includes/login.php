@@ -30,24 +30,24 @@ if (isset($_POST['login'])) {
 				$_SESSION['last_name'] = $user['last_name'];
 				$_SESSION['phone'] = $user['phone'];
 
-				header("Location: /OneKenya/index.php");
+				header("Location: ../index.php");
 				exit();
 
 			}else{
-				header("Location: /OneKenya/login.php?error=Unknown error occured");
+				header("Location: ../login.php?error=Unknown error occured");
 				exit();
 			}
 		}
 
 	}else{
-		header("Location: /OneKenya/login.php?error=Email is not registered");
+		header("Location: ../login.php?error=Email is not registered");
 		exit();
 	}
 
 
 
 }else{
-	header("Location OneKenya/login.php");
+	header("Location ../login.php");
 }
 
 
